@@ -1,10 +1,6 @@
 #install a package
 dnf install nginx -y
 
-#enable and start a service
-systemctl enable nginx
-systemctl start nginx
-
 #copy reverse proxy configuration
 cp expense.conf /etc/nginx/default.d/expense.conf
 
@@ -19,5 +15,6 @@ cd usr/share/nginx/html
 unzip tmp/frontend.zip
 
 
-#restart nginx service
+#enable and start a service
+systemctl enable nginx
 systemctl restart nginx
