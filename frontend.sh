@@ -12,7 +12,7 @@ curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-fro
 
 #extract content
 cd usr/share/nginx/html
-unzip tmp/frontend.zip
+unzip /tmp/frontend.zip
 
 
 #enable and start a service
