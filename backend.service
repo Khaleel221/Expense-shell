@@ -1,0 +1,12 @@
+[Unit]
+Description=Backend Service               # A short description of this service
+
+[Service]
+User=expense                               # Run as the 'expense' user for security (not root)
+Environment=DB_HOST=172.31.23.214   # Set an environment variable for the database host
+ExecStart=/bin/node /app/index.js          # Command to start the Node.js backend
+SyslogIdentifier=backend                   # for store the logs with name
+Restart=always                             # Automatically restart if the process stops/crashes
+
+[Install]
+WantedBy=multi-user.target                 # Start this service automatically during normal boot
